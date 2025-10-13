@@ -1,0 +1,18 @@
+<mat-card class="cart-card">
+    <button mat-icon-button (click)="removeProduct(item)" class="close-btn">
+        <mat-icon>close</mat-icon>
+    </button>
+    <mat-card-content class="cart-content d-flex">
+        <div class="cart-item-img">
+            <img [src]="item.product.imageUrl" class="img-responsive" [alt]="item.product.name">
+        </div>
+        <div class="cart-item-details">
+            <div class="cart-item-name">{{item.product.name}}</div>
+            <div class="cart-item-price-quantity d-flex">
+                <div class="cart-item-price"><span class="fw-500 pr-5">Price(₹) : </span>{{item.product.price}}</div>
+                <span class="pipe">|</span>
+                <div class="cart-item-quantity"><span class="fw-500 pr-5">Qty :</span>{{item.quantity}}</div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

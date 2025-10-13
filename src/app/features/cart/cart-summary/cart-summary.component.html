@@ -1,0 +1,20 @@
+<mat-card class="summary-card">
+    <mat-card-header class="price-title">Price Details</mat-card-header>
+    <mat-card-content>
+        <div class="price-summary">
+            <div class="price-heading">Total MRP</div>
+            <div class="total-price">{{ total$ | async}}</div>
+        </div>
+        <div class="price-summary">
+            <div class="price-heading">Platform Fees</div>
+            <div class="total-price">0</div>
+        </div>
+        <mat-divider class="divider"></mat-divider>
+        <div class="price-summary">
+            <div class="price-heading">Total Amount</div>
+            <div class="total-price">
+                <b><span>₹</span><span>{{ total$ | async}}</span></b>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

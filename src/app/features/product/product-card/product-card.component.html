@@ -1,0 +1,17 @@
+<div class="product">
+    <mat-card class="product-card mat-elevation-z24">
+        <img [src]="product.imageUrl" [alt]="product.name" class="product-img" />
+        <div class="product-company">{{ product.company}}</div>
+        <mat-card-header>
+            <mat-card-title class="product-title">{{ product.name }}</mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content>
+            <div class="product-price"> <span>₹</span>{{ product.price }}</div>
+        </mat-card-content>
+        
+        <mat-card-actions class="cart-btn justify-center">
+            <button mat-stroked-button color="cart-btn" (click)="addProduct(product)">Add to Cart <mat-icon>shopping_cart</mat-icon></button>
+        </mat-card-actions>
+    </mat-card>
+</div>

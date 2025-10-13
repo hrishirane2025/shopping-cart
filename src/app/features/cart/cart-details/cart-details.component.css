@@ -1,0 +1,30 @@
+.cart {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 70%;
+}
+
+.cart-product {
+    width: 50%;
+}
+
+.cart-summary {
+    width: 35%;
+}
+
+.cart-action-strip {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-item-selected {
+    font-size: 14px;
+}
+
+.shopping-link {
+    color: #005cbb;
+    text-decoration: none   ;
+}

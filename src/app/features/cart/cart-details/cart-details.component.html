@@ -1,0 +1,25 @@
+<div class="cart">
+    @if(cartCount$ | async){
+        <div class="cart-product">
+            <div class="cart-action-strip">
+                <div class="cart-item-selected"> <b class="item-count"> {{ cartCount$ |  async }}</b> Items Selected</div>
+                <button mat-button (click)="emptyCart()">Remove</button>
+            </div>
+            <div class="cart-items">
+                 @for(item of cartItems; track item.product.id){
+                    <app-cart-card [item]="item"></app-cart-card>
+                 }
+            </div>
+        </div>
+        <div class="cart-summary">
+            <app-cart-summary></app-cart-summary>
+        </div>
+    }
+    @else {
+        <div class="empty-cart">
+            <h1>Oops! Nothing here yet.</h1>
+            <p><a routerLink="/product" class="shopping-link">Start shopping </a>and fill your cart with something awesome!</p>
+        </div>
+        
+    }
+</div>

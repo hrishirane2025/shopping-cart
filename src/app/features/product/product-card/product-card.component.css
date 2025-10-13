@@ -1,0 +1,50 @@
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* .product-card {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1)
+} */
+
+.product-title {
+    /* font-size: 18px; */
+    color: #2e4862;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.mat-mdc-card-header {
+    padding-top: 10px;
+}
+
+.product-company {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0 0 16px;
+}
+
+.product-price {
+    color: #2e7d32;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.mat-mdc-card {
+    background-color: #fff;
+}
+
+.product-img {
+    display: block;
+}
+
+.cart-btn {
+    margin: 15px 0 8px 0;
+}
+
+.justify-center {
+    justify-content: center;
+}

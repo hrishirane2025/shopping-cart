@@ -1,0 +1,14 @@
+.product-page{
+    display: flex;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 16px;
+}
+
+.w-30 {
+    width: calc((100% - 64px) / 5);
+}

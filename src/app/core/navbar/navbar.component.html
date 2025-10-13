@@ -1,0 +1,6 @@
+<div class="navbar nav-horizontal">
+  <a class="nav-link" routerLinkActive="active" routerLink="product">Home</a>
+  <a class="nav-link" routerLinkActive="active" routerLink="cart">
+    <div [matBadge]="cartItemsCount$ | async" matBadgeOverlap="false" class="demo-section">My Cart</div>
+  </a>
+</div>

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "company": "Apple",
+    "name": "iPhone 15",
+    "description": "iPhone 15 256 GB",
+    "price": 10000,
+    "imageUrl": "assets/images/iPhone-15.jpg",
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "company": "Samsung",
+    "name": "Galaxy S24",
+    "description": "Latest Phone",
+    "price": 5000,
+    "imageUrl": "assets/images/galaxy-s24.jpg",
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "company": "Neo",
+    "name": "Neo 10",
+    "description": "Portable speaker with deep bass.",
+    "price": 2000,
+    "imageUrl": "assets/images/neo-10.jpg",
+    "inStock": false
+  },
+  {
+    "id": 4,
+    "company": "One Plus",
+    "name": "One Plus Nord 5",
+    "description": "Portable speaker with deep bass.",
+    "price":7000,
+    "imageUrl": "assets/images/nord5.jpg",
+    "inStock": false
+  },
+  {
+    "id": 5,
+    "company": "Narzo",
+    "name": "Narzo lite 80",
+    "description": "Portable speaker with deep bass.",
+    "price": 3000,
+    "imageUrl": "assets/images/narzo-lite.jpg",
+    "inStock": false
+  },
+  {
+    "id": 6,
+    "company": "Redmi",
+    "name": "Redmi A4",
+    "description": "Redmi A4 5G",
+    "price": 3500,
+    "imageUrl": "assets/images/redmi-A4.jpg",
+    "inStock": false
+  }
+]

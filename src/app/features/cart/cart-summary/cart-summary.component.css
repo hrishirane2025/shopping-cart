@@ -1,0 +1,21 @@
+.summary-card {
+    background-color: #fff;
+    margin: auto;
+}
+
+.price-summary {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.price-title {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.divider {
+    margin: 10px 0;
+    border-color: #eaeaec;
+}

@@ -1,0 +1,8 @@
+
+<mat-dialog-content>
+    <p [innerHtml]="data.message"></p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-button (click)="onConfirm()">Remove</button>
+</mat-dialog-actions>
