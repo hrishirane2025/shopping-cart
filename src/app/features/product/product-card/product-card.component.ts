@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { ProductsService } from '../../../services/products.service';
 import { Product } from '../../../models/products.model';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -17,10 +17,10 @@ export class ProductCardComponent {
 
   @Input() product!:Product;
   
-  constructor(private productService: ProductsService, private snackBar:MatSnackBar){}
+  constructor(private cartService: CartService, private snackBar:MatSnackBar){}
 
   addProduct(product:Product) {
-    const isProductAdded = this.productService.addProducts(product);
+    const isProductAdded = this.cartService.addProducts(product);
     if(isProductAdded) {
       this.snackBar.open(isProductAdded, '',{duration: 2000})
     }

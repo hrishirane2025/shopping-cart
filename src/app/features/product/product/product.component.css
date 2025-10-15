@@ -6,9 +6,22 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    gap: 16px;
+    column-gap: 16px;
+    row-gap: 0;
 }
 
-.w-30 {
-    width: calc((100% - 64px) / 5);
+.card-size {
+    width: calc((100% - 16px) / 2);
+}
+
+@media screen and (min-width: 768px) {
+   .card-size {
+        width: calc((100% - 32px) / 3);
+    } 
+}
+
+@media screen and (min-width: 1024px) {
+   .card-size {
+        width: calc((100% - 64px) / 5);
+    } 
 }

@@ -3,8 +3,8 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatListModule } from '@angular/material/list';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Observable } from 'rxjs';
-import { ProductsService } from '../../services/products.service';
 import { CommonModule } from '@angular/common';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -15,10 +15,10 @@ import { CommonModule } from '@angular/common';
 export class NavbarComponent implements OnInit {
   cartItemsCount$!:Observable<number>;
 
-  constructor(private productService: ProductsService){ }
+  constructor(private cartService: CartService){ }
 
   ngOnInit(): void {
-      this.cartItemsCount$ = this.productService.getCartCount();
+      this.cartItemsCount$ = this.cartService.getCartCount();
   }
 
 }

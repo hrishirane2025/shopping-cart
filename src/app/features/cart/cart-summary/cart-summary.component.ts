@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
-import { ProductsService } from '../../../services/products.service';
 import { Observable } from 'rxjs';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-cart-summary',
@@ -14,10 +14,10 @@ import { Observable } from 'rxjs';
 export class CartSummaryComponent implements OnInit {
   total$!: Observable<number>;
 
-  constructor(private productService: ProductsService){}
+  constructor(private cartService: CartService){}
 
   ngOnInit(): void {
-    this.total$ = this.productService.getTotal();
+    this.total$ = this.cartService.getTotal();
   }
 
 }

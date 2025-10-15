@@ -1,17 +1,16 @@
-.product-grid {
+/* .product-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-}
-
-/* .product-card {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1)
 } */
 
+.product {
+    margin-bottom: 16px;
+}
+
 .product-title {
-    /* font-size: 18px; */
     color: #2e4862;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.2;
 }
@@ -39,6 +38,8 @@
 
 .product-img {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 .cart-btn {
@@ -47,4 +48,10 @@
 
 .justify-center {
     justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .product-title {
+        font-size: 20px;
+    }
 }

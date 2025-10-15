@@ -4,7 +4,7 @@
     </button>
     <mat-card-content class="cart-content d-flex">
         <div class="cart-item-img">
-            <img [src]="item.product.imageUrl" class="img-responsive" [alt]="item.product.name">
+            <img [src]="item.product.imageUrl" loading="lazy" class="img-responsive" [alt]="item.product.name">
         </div>
         <div class="cart-item-details">
             <div class="cart-item-name">{{item.product.name}}</div>

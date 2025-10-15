@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
-import { ProductsService } from '../../../services/products.service';
 import { CartItems } from '../../../models/products.model';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationBoxComponent } from '../../../core/confirmation-box/confirmation-box.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-cart-card',
@@ -17,7 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 export class CartCardComponent {
 
   @Input() item!:CartItems;
-  constructor(private productService: ProductsService, private dialog: MatDialog){}
+  constructor(private cartService: CartService, private dialog: MatDialog){}
 
   removeProduct(item:CartItems) {
     const dialogRef = this.dialog.open(ConfirmationBoxComponent, {
@@ -27,7 +27,7 @@ export class CartCardComponent {
   
       dialogRef.afterClosed().subscribe(result => {
         if (result) {
-          this.productService.removeProductFromCart(item);
+          this.cartService.removeProductFromCart(item);
         }
       });
   }

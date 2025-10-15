@@ -5,6 +5,7 @@ import { CartItems, Product } from '../../../models/products.model';
 import { ProductsService } from '../../../services/products.service';
 import { map, Observable } from 'rxjs';
 import { MatCardModule } from '@angular/material/card';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -17,7 +18,7 @@ export class ProductComponent implements OnInit {
   cartItems$!:Observable<number>;
   cartDataItems:CartItems[] = [];
   
-  constructor(private productService: ProductsService){}
+  constructor(private productService: ProductsService, private cartService: CartService){}
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe((result)=>{
@@ -25,8 +26,8 @@ export class ProductComponent implements OnInit {
     })
 
     // cart
-    this.cartItems$ = this.productService.selectedCartItems$.pipe(map((ele)=> ele.length));
-    this.productService.selectedCartItems$.subscribe((result)=>{
+    this.cartItems$ = this.cartService.selectedCartItems$.pipe(map((ele)=> ele.length));
+    this.cartService.selectedCartItems$.subscribe((result)=>{
       this.cartDataItems = result;
     })
   }
